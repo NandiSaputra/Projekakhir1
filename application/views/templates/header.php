@@ -13,7 +13,7 @@
  </head>
 
  <body>
-  <div class="container mt-5">
+  <div class="container">
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
      <a class="navbar-brand" href="<?= base_url('pelanggan') ?>">TOKO SEPEDA YG SANGAT SEDERHANA</a>

@@ -10,7 +10,7 @@
       <thead>
         <tr>
           <th scope="col">No</th>
-          <th scope="col">Nama Barang</th>
+          <th scope="col">Nama Sepeda</th>
           <th scope="col">Jumlah</th>
           <th scope="col">Diskon</th>
           <th scope="col">Harga Total</th>

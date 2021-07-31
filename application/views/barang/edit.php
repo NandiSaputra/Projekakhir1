@@ -2,11 +2,11 @@
        <form action="<?= base_url('barang/editbarang') ?>" method="POST">
        <input type="hidden" name="barang_id" value="<?=$barang['barang_id']?>">
          <div class="mb-3">
-           <label for="exampleFormControlInput1" class="form-label">Nama Barang</label>
+           <label for="exampleFormControlInput1" class="form-label">Nama Sepeda</label>
            <input type="text" name="nama_barang" class="form-control" id="exampleFormControlInput1" placeholder="Nama Barang" value="<?= $barang['nama_barang'] ?>">
          </div>
          <div class="mb-3">
-           <label for="exampleFormControlInput1" class="form-label">Harga</label>
+           <label for="exampleFormControlInput1" class="form-label">Harga Sepeda</label>
            <input type="number" name="harga" class="form-control" id="exampleFormControlInput1" placeholder="Harga" value="<?= $barang['harga_barang'] ?>">
          </div>
          <div class="mb-3">

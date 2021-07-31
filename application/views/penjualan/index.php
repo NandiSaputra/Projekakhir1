@@ -10,7 +10,7 @@
       <thead>
         <tr>
           <th scope="col">No</th>
-          <th scope="col">Pelanggan</th>
+          <th scope="col">Pembeli</th>
           <th scope="col">Tanggal Penjualan</th>
           <th scope="col">Total belanjan</th>
           <th scope="col">Keterangan</th>
