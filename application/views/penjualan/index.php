@@ -25,11 +25,11 @@
             <th scope="row"><?= $no + 1 ?></th>
             <td><?= $penjualan['nama_pelanggan']; ?></td>
             <td><?= $penjualan['tgl_penjualan']; ?></td>
-             <td><?= $penjualan['total']; ?></td>
+            <td><?= $penjualan['total']; ?></td>
             <td><?= $penjualan['keterangan']; ?></td>
-           
+
             <td>
-              <a href="<?= base_url('penjualan/detail/' . $penjualan['penjualan_id']) ?>" class="btn btn-warning">Detail</a>
+              <a href="<?= base_url('penjualan/detail/' . $penjualan['penjualan_id']) ?>" class="btn btn-info">Detail</a>
               <a href="<?= base_url('penjualan/hapus/' . $penjualan['penjualan_id']) ?>" class="btn btn-danger">Hapus</a>
             </td>
           </tr>
