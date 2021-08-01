@@ -1,41 +1,42 @@
-    <div class="row mt-2">
-      <div class="col-3">
+    <div class="row mt-4">
+      <div class="col-12">
+        <table class="table">
+          <thead class="table-dark">
+            <tr>
+              <th>No</th>
+              <th>Nama Pembeli</th>
+              <th>Tanggal Penjualan</th>
+              <th>Total Pembelian</th>
+              <th>Keterangan</th>
+              <th>AKSI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+            foreach ($allpenjualan as $no => $penjualan) {
+            ?>
+              <tr>
+                <th scope="row"><?= $no + 1 ?></th>
+                <td><?= $penjualan['nama_pelanggan']; ?></td>
+                <td><?= $penjualan['tgl_penjualan']; ?></td>
+                <td><?= $penjualan['total']; ?></td>
+                <td><?= $penjualan['keterangan']; ?></td>
+
+                <td>
+                  <a href="<?= base_url('penjualan/detail/' . $penjualan['penjualan_id']) ?>" class="btn btn-info">Detail</a>
+                  <a href="<?= base_url('penjualan/hapus/' . $penjualan['penjualan_id']) ?>" class="btn btn-danger">Hapus</a>
+                </td>
+              </tr>
+            <?php } ?>
+          </tbody>
+        </table>
+
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambah">
           Tambah
         </button>
       </div>
     </div>
-    <table class="table mt-2">
-      <thead>
-        <tr>
-          <th scope="col">No</th>
-          <th scope="col">Pembeli</th>
-          <th scope="col">Tanggal Penjualan</th>
-          <th scope="col">Total belanjan</th>
-          <th scope="col">Keterangan</th>
-          <th scope="col">Aksi</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php
-        foreach ($allpenjualan as $no => $penjualan) {
-        ?>
-          <tr>
-            <th scope="row"><?= $no + 1 ?></th>
-            <td><?= $penjualan['nama_pelanggan']; ?></td>
-            <td><?= $penjualan['tgl_penjualan']; ?></td>
-            <td><?= $penjualan['total']; ?></td>
-            <td><?= $penjualan['keterangan']; ?></td>
-
-            <td>
-              <a href="<?= base_url('penjualan/detail/' . $penjualan['penjualan_id']) ?>" class="btn btn-info">Detail</a>
-              <a href="<?= base_url('penjualan/hapus/' . $penjualan['penjualan_id']) ?>" class="btn btn-danger">Hapus</a>
-            </td>
-          </tr>
-        <?php } ?>
-      </tbody>
-    </table>
     <!-- Modal -->
     <div class="modal fade" id="tambah" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">

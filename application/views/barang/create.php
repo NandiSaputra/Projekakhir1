@@ -10,7 +10,7 @@
      </div>
      <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Stock</label>
-      <input type="number" name="stok" class="form-control" id="exampleFormControlInput1" placeholder="Stock Barang">
+      <input type="number" name="stok" class="form-control" id="exampleFormControlInput1" placeholder="Stock Sepeda">
      </div>
      <div class="mb-3">
       <label for="exampleFormControlTextarea1" class="form-label">Keterangan</label>

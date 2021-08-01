@@ -26,7 +26,7 @@
             <td><?= $penjualan['tgl_penjualan']; ?></td>
             <td><?= $penjualan['keterangan']; ?></td>
             <td>
-              <a href="<?= base_url('penjualan/edit/' . $penjualan['penjualan_id']) ?>" class="btn btn-warning">Edit</a>
+              <a href="<?= base_url('penjualan/edit/' . $penjualan['penjualan_id']) ?>" class="btn btn-info">Edit</a>
               <a href="<?= base_url('penjualan/hapus/' . $penjualan['penjualan_id']) ?>" class="btn btn-danger">Hapus</a>
             </td>
           </tr>

@@ -3,7 +3,7 @@
        <input type="hidden" name="pelanggan_id" value="<?=$pelanggan['pelanggan_id']?>">
          <div class="mb-3">
            <label for="exampleFormControlInput1" class="form-label">Nama pembeli</label>
-           <input type="text" name="nama_pelanggan" class="form-control" id="exampleFormControlInput1" placeholder="Nama Pelanggan" value="<?= $pelanggan['nama_pelanggan'] ?>">
+           <input type="text" name="nama_pelanggan" class="form-control" id="exampleFormControlInput1" placeholder="Nama Pembeli" value="<?= $pelanggan['nama_pelanggan'] ?>">
          </div>
          <div class="mb-3">
            <label for="exampleFormControlInput1" class="form-label">No TLP</label>

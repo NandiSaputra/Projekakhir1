@@ -44,6 +44,9 @@ class Penjualandetail extends CI_Controller
 		$barang = $this->db->get_where('penjualan_detail', ['penjualan_id' => $this->input->post('penjualan_id')])->row_array();
 
 		$grandtotal = $barang['harga_total'] + $hargatotal;
+		$this->db->set('total', $grandtotal);
+		$this->db->where('penjualan_id', $this->input->post('penjualan_id'));
+		$this->db->update('penjualan');
 
 
 		$data = [
@@ -91,12 +94,19 @@ class Penjualandetail extends CI_Controller
 		redirect('penjualan');
 	}
 
-	public function hapus($penjualan_id)
+	public function hapus($Penjualan_id, $penjualan_detail_id)
 	{
+		$pdp = $this->db->get_where('penjualan_detail', ['penjualan_detail_id' => $penjualan_detail_id])->row_array();
+		$pd = $this->db->get_where('penjualan', ['penjualan_id' => $Penjualan_id])->row_array();
+	
 
+		$grandtotal =$pd['total'] - $pdp['harga_total'];
+		$this->db->set('total', $grandtotal);
+		$this->db->where('penjualan_id',$Penjualan_id);
+		$this->db->update('penjualan');
 		
-		$this->db->where('penjualan_id', $penjualan_id);
-		$this->db->delete('penjualan');
+		$this->db->where('penjualan_detail_id', $penjualan_detail_id);
+		$this->db->delete('penjualan_detail');
 
 		$this->session->set_flashdata('message', '<div class="alert alert-warning alert-dismissible fade show" role="alert">
   <strong>Selamat!</strong> Data anda berhasil di Hapus.

@@ -2,7 +2,7 @@
     <form action="<?= base_url('pelanggan/simpanpelanggan') ?>" method="POST">
      <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Nama Pembeli</label>
-      <input type="text" name="nama_pelanggan" class="form-control" id="exampleFormControlInput1" placeholder="Nama Pelanggan">
+      <input type="text" name="nama_pelanggan" class="form-control" id="exampleFormControlInput1" placeholder="Nama Pembeli">
      </div>
      <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">No Tlp</label>

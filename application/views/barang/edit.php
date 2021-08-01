@@ -11,7 +11,7 @@
          </div>
          <div class="mb-3">
            <label for="exampleFormControlInput1" class="form-label">Stock</label>
-           <input type="number" name="stok" class="form-control" id="exampleFormControlInput1" placeholder="Stock Barang" value="<?= $barang['stok'] ?>">
+           <input type="number" name="stok" class="form-control" id="exampleFormControlInput1" placeholder="Stock Sepeda" value="<?= $barang['stok'] ?>">
          </div>
          <div class="mb-3">
            <label for="exampleFormControlTextarea1" class="form-label">Keterangan</label>
