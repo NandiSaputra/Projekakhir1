@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 31 Jul 2021 pada 19.59
+-- Waktu pembuatan: 15 Agu 2021 pada 00.16
 -- Versi server: 10.4.18-MariaDB
 -- Versi PHP: 7.3.27
 
@@ -40,7 +40,8 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`barang_id`, `nama_barang`, `harga_barang`, `stok`, `keterangan`) VALUES
-(18, 'jdhksk', 888, 7, 'sjjs');
+(21, 'Ponix 123', 1000000, 20, 'Baru'),
+(22, 'Element bike 150', 2000000, 10, 'Baru');
 
 -- --------------------------------------------------------
 
@@ -58,7 +59,9 @@ CREATE TABLE `kategori` (
 --
 
 INSERT INTO `kategori` (`id_kategori`, `kategori`) VALUES
-(1, 'eyeuy');
+(3, 'Roadbike'),
+(4, 'sportbike'),
+(5, 'roadtrip bike');
 
 -- --------------------------------------------------------
 
@@ -78,10 +81,8 @@ CREATE TABLE `pelanggan` (
 --
 
 INSERT INTO `pelanggan` (`pelanggan_id`, `nama_pelanggan`, `no_tlp`, `alamat`) VALUES
-(11, 'budi anduk', 883838383, 'sjsjs'),
-(12, 'cecep', 2147483647, 'sjsjks'),
-(13, 'zaenudin', 48484999, 'sjsjs'),
-(14, 'tredx', 2147483647, 'ghhfhjgv');
+(16, 'budi', 2147483647, 'jl.melati'),
+(17, 'budi anduk', 2147483647, 'Jl. mawar');
 
 -- --------------------------------------------------------
 
@@ -102,8 +103,8 @@ CREATE TABLE `penjualan` (
 --
 
 INSERT INTO `penjualan` (`penjualan_id`, `tgl_penjualan`, `pelanggan_id`, `keterangan`, `total`) VALUES
-(1627485464, '21-07-28', 13, 'jkjk', NULL),
-(1627650184, '21-07-30', 13, 'jbkm ', NULL);
+(1627837218, '21-08-01', 11, 'Warna biru', 0),
+(1628979305, '21-08-15', 16, 'pembeliaan 1', 2000000);
 
 -- --------------------------------------------------------
 
@@ -125,16 +126,11 @@ CREATE TABLE `penjualan_detail` (
 --
 
 INSERT INTO `penjualan_detail` (`penjualan_detail_id`, `penjualan_id`, `barang_id`, `harga_total`, `jumlah`, `diskon`) VALUES
-(23, 1627469245, 16, 200000, 10, 0),
-(24, 1627469245, 17, 60000, 2, 0),
-(25, 1627469246, 16, 240000, 12, 0),
-(26, 1627483236, 16, 0, 0, 0),
-(27, 1627477052, 17, 84000, 4, 30),
-(28, 1627485346, 16, 294400, 32, 54),
-(29, 1627485346, 17, 1350000, 45, 0),
-(30, 1627485464, 16, 1080000, 54, 0),
-(31, 1627650184, 17, 7017600, 544, 57),
-(32, 1627650184, 17, 1950000, 65, 0);
+(38, 1627485464, 18, 47952, 54, 0),
+(39, 1627485464, 18, 5328, 6, 0),
+(41, 1627837026, 18, 1776, 2, 0),
+(44, 1627838177, 20, 2224, 4, 0),
+(45, 1628979305, 22, 2000000, 1, 0);
 
 --
 -- Indexes for dumped tables
@@ -178,31 +174,31 @@ ALTER TABLE `penjualan_detail`
 -- AUTO_INCREMENT untuk tabel `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `barang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `barang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `pelanggan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `pelanggan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT untuk tabel `penjualan`
 --
 ALTER TABLE `penjualan`
-  MODIFY `penjualan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1627650185;
+  MODIFY `penjualan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1628979306;
 
 --
 -- AUTO_INCREMENT untuk tabel `penjualan_detail`
 --
 ALTER TABLE `penjualan_detail`
-  MODIFY `penjualan_detail_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `penjualan_detail_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
